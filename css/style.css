@@ -387,18 +387,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: var(--space-md); }
-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: var(--space-sm); margin-top: var(--space-xl); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.2rem; margin-top: var(--space-xl); position: relative; }
+h2::after { content: ''; display: block; width: 40px; height: 1px; background: var(--accent-dim); margin-top: 0.8rem; }
 h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); margin-bottom: var(--space-sm); margin-top: var(--space-lg); color: var(--accent); }
 h4 { font-size: 1.1rem; margin-bottom: var(--space-xs); margin-top: var(--space-md); }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   color: var(--text-primary);
   font-weight: 300;
 }
 
 p + p {
-  margin-top: -0.3rem;
+  margin-top: 0;
 }
 
 strong, b {
@@ -436,11 +437,11 @@ em, i {
 /* --- Blockquote (Philosopher Quotes) --- */
 blockquote {
   position: relative;
-  margin: var(--space-lg) 0;
-  padding: var(--space-md) var(--space-md) var(--space-md) var(--space-lg);
+  margin: 2.5rem 0;
+  padding: 1.8rem 1.8rem 1.8rem 2.5rem;
   border-left: 2px solid var(--accent-dim);
-  background: linear-gradient(135deg, var(--gold-dim), transparent);
-  border-radius: 0 8px 8px 0;
+  background: linear-gradient(135deg, var(--gold-dim), transparent 70%);
+  border-radius: 0 6px 6px 0;
 }
 
 blockquote p {
@@ -645,22 +646,18 @@ blockquote::before {
   margin: 0;
 }
 
-/* --- Scroll Reveal Animation --- */
+/* --- Scroll Reveal: disabled for body content (was flitchy) ---
+   .reveal class is now a no-op so existing HTML doesn't break.
+   Content is visible immediately for a smooth reading experience. */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
-
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
 
 /* --- Chapter Navigation (Bottom of Chapter) --- */
 .chapter-nav {
@@ -905,13 +902,13 @@ blockquote::before {
 
 .lead:first-of-type::first-letter {
   font-family: var(--font-heading);
-  font-size: 3.8rem;
+  font-size: 4.2rem;
   float: left;
-  line-height: 0.8;
-  padding-right: 0.6rem;
-  padding-top: 0.15rem;
+  line-height: 0.75;
+  padding-right: 0.7rem;
+  padding-top: 0.1rem;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* --- Verse / Poetry Style --- */
@@ -1050,6 +1047,33 @@ blockquote::before {
   .chapter-title {
     font-size: 2rem;
   }
+}
+
+/* --- Arctus Theme Variant --- */
+.arctus-theme {
+  --accent: #7a9bb5;
+  --accent-light: #a3c4d9;
+  --accent-dim: #4a6a80;
+  --gold: #7a9bb5;
+  --gold-dim: rgba(122, 155, 181, 0.12);
+  --border: #1e2830;
+  --border-light: #2a3540;
+  --bg-subtle: #0f1519;
+  --bg-card: #111820;
+  --bg-secondary: #0c1015;
+}
+
+.arctus-theme ::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.arctus-theme .hero-bg {
+  filter: brightness(0.25) saturate(0.4) hue-rotate(10deg);
+}
+
+.arctus-theme blockquote {
+  background: linear-gradient(135deg, rgba(122, 155, 181, 0.08), transparent 70%);
 }
 
 /* --- Print Styles --- */

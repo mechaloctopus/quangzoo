@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Octurian Code — Analects of the Code of Arctus</title>
+  <meta name="description" content="A modern guide disguised as an ancient codex. Life hacks from the global medicine walk, written by nobody in particular.">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .landing-quote {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+    }
+    .landing-quote p {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .landing-quote cite {
+      display: block;
+      margin-top: 1rem;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      font-style: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .prologue-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 var(--space-md) var(--space-xl);
+    }
+    .prologue-section p {
+      font-weight: 300;
+      margin-bottom: 1.4rem;
+    }
+    .prologue-section .lead:first-of-type::first-letter {
+      font-family: var(--font-heading);
+      font-size: 4.2rem;
+      float: left;
+      line-height: 0.75;
+      padding-right: 0.7rem;
+      padding-top: 0.1rem;
+      color: var(--accent);
+      font-weight: 300;
+    }
+    .commandments {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-lg) 0;
+      counter-reset: commandment;
+    }
+    .commandments li {
+      counter-increment: commandment;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1.2rem;
+      align-items: baseline;
+      font-weight: 300;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+    .commandments li::before {
+      content: counter(commandment, upper-roman);
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--accent-dim);
+      min-width: 40px;
+      font-weight: 300;
+    }
+    .commandments li:last-child { border-bottom: none; }
+    .commandments li strong { color: var(--accent-light); }
+  </style>
+</head>
+<body class="arctus-theme">
+
+  <div class="reading-progress"></div>
+
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">Arctus</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#prologue">Prologue</a></li>
+      <li><a href="#codex">The Codex</a></li>
+      <li><a href="../index.html">Quangzoo Draft</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">The Octurian Code</p>
+      <h1 class="hero-title">Analects of the<br>Code of Arctus</h1>
+      <p class="hero-subtitle">written by no one in particular</p>
+      <div class="hero-line"></div>
+      <div class="hero-scroll">
+        <span>Enter</span>
+        <span class="scroll-arrow"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prologue / Intro -->
+  <section class="intro-section" id="prologue">
+    <div class="section-break-line"></div>
+    <p>
+      Nobody wrote this book. It arrived like a signal on a frequency
+      most people forgot how to tune. Whispers in the wind say it was
+      one JP Cunningham &mdash; the man with a thousand faces &mdash;
+      but nobody can confirm that, and he wouldn't want them to.
+    </p>
+    <div class="section-break-line"></div>
+  </section>
+
+  <!-- The Transmission (Prologue Chapter) -->
+  <section class="prologue-section">
+
+    <h2 style="text-align:center; margin-top: var(--space-lg);">The Transmission</h2>
+
+    <p class="lead">Suppose you lived a long and strange life. Suppose you walked through enough countries that the borders stopped meaning anything and enough philosophies that the labels fell off like old wallpaper. Suppose you sat with monks and argued with scientists and ate bread with farmers and coded until dawn with hackers who believed they could reprogram civilization through an open-source terminal. Suppose you hitchhiked twenty thousand miles on nothing but faith and thumb and the peculiar mercy of strangers. Suppose at the end of all that walking, all that reading, all that breaking and rebuilding of your own mind, somebody sat you down and said: <em>write it down, old man. All of it. Everything you think matters. One book. For the ones who come after.</em></p>
+
+    <p>This is that book.</p>
+
+    <p>It is not scripture. It is not gospel. It is not the final word on anything &mdash; because any book that claims to be the final word is lying to you, and you should put it down immediately and go outside. This is a field manual. A collection of patterns that survived every test the road could throw at them. Some of these patterns are five thousand years old. Some of them were confirmed by peer-reviewed neuroscience last Tuesday. The old ones and the new ones keep saying the same thing, which is either a coincidence or evidence of something worth paying attention to.</p>
+
+    <p>George Washington, in his farewell address, warned the young republic about the "baneful effects of the spirit of party" &mdash; the tribal warfare of partisan politics that "agitates the community with ill-founded jealousies and false alarms, kindles the animosity of one part against another." That was 1796. Two hundred and thirty years later the warning reads like a live dispatch from this morning's news cycle. The founding insight was simple: <strong>do not let other people's theater become your identity.</strong> Think for yourself. Endorse the candidates who align with your principles. Refuse the ones who don't. But never &mdash; never &mdash; let the machine of social engineering trick you into hating your neighbor over a color-coded team jersey. That game is designed to keep you distracted while your pockets are picked.</p>
+
+    <blockquote>
+      <p>However combinations or associations of the above description may now and then answer popular ends, they are likely, in the course of time and things, to become potent engines, by which cunning, ambitious, and unprincipled men will be enabled to subvert the power of the people.</p>
+      <cite>&mdash; George Washington, Farewell Address (1796)</cite>
+    </blockquote>
+
+    <p>This book takes that principle and extends it to every domain of life. Diet. Meditation. Business ethics. How to learn anything. How to think without being captured. How to love without being consumed. How to die without being afraid. How to grow food that doesn't poison you, build systems that don't enslave you, and carry yourself with the kind of grace that makes the room better just because you walked into it.</p>
+
+    <p>It is also, if you read it right, a guide to getting <em>sturdy</em>. Not tough in the fragile, brittle way of the man who has never been tested. Sturdy in the way of bamboo &mdash; hollow, flexible, rooted, and absolutely impossible to break. The kind of sturdy that lets you walk into any room on the planet, any culture, any crisis, any conversation, and be genuinely, quietly useful. That is the goal. Not fame. Not wealth. Not enlightenment on a mountaintop with nobody watching. <strong>Usefulness.</strong> The kind that compounds silently across a lifetime and leaves the world marginally less stupid than you found it.</p>
+
+    <p>Here, then, is the code. Call it the Octurian Code if you want a name that sounds like it was carved into the wall of a temple by someone who knew what they were doing. Call it the Code of Arctus if you prefer the sound of a navigator star. Call it whatever you want. The name is a finger. The moon is your life.</p>
+
+    <h3 style="text-align:center; margin-top: var(--space-xl);">The Directives</h3>
+
+    <p style="text-align:center; font-family: var(--font-ui); font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--space-md);">Twenty-Four principles. One life. No excuses.</p>
+
+    <ol class="commandments">
+      <li><strong>Question everything, believe nothing permanently.</strong> Hold every idea at arm's length. Test it. Keep what survives the test. Discard what doesn't. Repeat until you die.</li>
+      <li><strong>Build competence before you perform confidence.</strong> The world is drowning in people who look like they know what they're doing. Be someone who actually does.</li>
+      <li><strong>Treat others the way you'd want to be treated.</strong> This is not soft. It is the mathematically optimal strategy for a social species playing an infinite game.</li>
+      <li><strong>Eat real food.</strong> If it was made in a factory by a chemist, it is not food. It is a product. Your body is the only vessel you get. Stop filling it with industrial waste.</li>
+      <li><strong>Learn how to learn.</strong> The specific knowledge you have today will be obsolete in a decade. The ability to master new domains never expires.</li>
+      <li><strong>Sit still every day.</strong> Ten minutes. No phone, no music, no agenda. Just you and the raw fact of being alive. The returns on this investment are obscene.</li>
+      <li><strong>Write it down.</strong> Your thoughts, your processes, your lessons. Knowledge that lives only in your head dies when you do. Documentation is immortality on the cheap.</li>
+      <li><strong>Do business only with the decent.</strong> Withdraw your money, your labor, and your attention from anyone who poisons, exploits, or corrupts. Starve the machine. Feed the alternative.</li>
+      <li><strong>Grow something.</strong> Even one tomato plant on a windowsill reconnects you to the cycle that feeds you. Scale from there.</li>
+      <li><strong>Read the primary sources.</strong> Not the headline. Not the tweet. Not the summary. The actual text. Form your own opinion. Everyone else is selling theirs.</li>
+      <li><strong>Protect your time like it's the last resource on Earth.</strong> Because for you, it is.</li>
+      <li><strong>Be kind to strangers.</strong> Not for karma. Not for credit. Because the person serving your coffee is fighting a war you know nothing about, and a moment of basic human decency might be the only ceasefire they get today.</li>
+      <li><strong>Reduce your dependencies.</strong> Every system you rely on is a chain. Diversify your energy, food, skills, income, and information sources. Sovereignty is not paranoia. It is engineering.</li>
+      <li><strong>Move your body.</strong> Walk, swim, climb, dance, fight, stretch. The body was not designed to sit in a chair for eight hours staring at a glowing rectangle. Apologize to it with motion.</li>
+      <li><strong>Follow the wind sometimes.</strong> Not everything needs a plan. Leave room for the drift, the accident, the sign you weren't looking for. The universe has a suggestion box. Check it occasionally.</li>
+      <li><strong>Say what you mean.</strong> Directly, kindly, without hedging. The world has enough fog. Be a window.</li>
+      <li><strong>Love with your whole chest.</strong> Not carefully, not strategically, not with one foot out the door. The Harvard study ran for eighty years and the answer was always the same: relationships are the whole game.</li>
+      <li><strong>Remember you will die.</strong> Not to be morbid. To be awake. The person who has genuinely faced their own finitude does not waste afternoons arguing with strangers on the internet.</li>
+      <li><strong>Create something every day.</strong> A meal, a sentence, a sketch, a solution. Creation is participation in the oldest pattern in the universe. Don't just consume. Contribute.</li>
+      <li><strong>Relax.</strong> Even in the fight. Especially in the fight. Tension is friction. The master moves like water because the master is not fighting themselves.</li>
+      <li><strong>Breathe.</strong> Consciously, deliberately, as a practice. It is the one back door into your autonomic nervous system that is always unlocked. Use it before every decision that matters.</li>
+      <li><strong>Study the old books.</strong> The Vedas, the Tao Te Ching, the Dhammapada, Ecclesiastes, Rumi. They survived millennia of war, censorship, and stupidity. That survival is evidence.</li>
+      <li><strong>Share what you know.</strong> Freely, without gatekeeping. Knowledge hoarded is knowledge wasted. The open-source model works for software and it works for wisdom.</li>
+      <li><strong>Carry yourself with grace.</strong> Stand when someone enters the room. Listen more than you speak. Hold the door. Write the thank-you note. These are not antiquated rituals. They are acts of war against a coarsening world.</li>
+    </ol>
+
+    <p>That's the short version. The book you are about to read is the long version &mdash; each directive unpacked, sourced, argued, and tested against the best available evidence from neuroscience, philosophy, agriculture, cryptography, martial arts, game theory, contemplative practice, and the hard-won experience of actually trying this stuff out on the open road.</p>
+
+    <p>It was written for the descendants. Not just biological ones &mdash; anyone who reads it and finds something useful becomes a descendant of the idea. You are now part of the lineage. Do something worthy with it.</p>
+
+    <div class="pull-quote" style="border-left:none;">
+      <p>"Belief is the death of intelligence."</p>
+      <cite>&mdash; Robert Anton Wilson, Cosmic Trigger I</cite>
+    </div>
+
+    <p style="text-align: center; font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-top: var(--space-xl);">Now then. Let's begin.</p>
+
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="toc-section" id="codex">
+    <div class="toc-header">
+      <p class="hero-eyebrow" style="animation:none; opacity:1; color: var(--accent); font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;">The Codex</p>
+      <h2>Twenty-Five Analects</h2>
+    </div>
+
+    <div class="toc-grid">
+
+      <div class="part-divider">
+        <h3>Part I &mdash; The Signal</h3>
+      </div>
+
+      <a href="chapters/01-the-current.html" class="toc-item">
+        <span class="toc-item-number">01</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Current</div>
+          <div class="toc-item-desc">There is a force that moves through everything and it does not need your permission. Lao Tzu called it the Tao. Physics calls it the unified field. We call it the current. Learn to swim with it.</div>
+        </div>
+      </a>
+
+      <a href="chapters/02-the-blueprints.html" class="toc-item">
+        <span class="toc-item-number">02</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Blueprints</div>
+          <div class="toc-item-desc">Archetypes, sacred geometry, the Fibonacci spiral in your DNA and in the hurricane. The patterns behind all patterns &mdash; and why recognizing them is the closest thing to a cheat code reality offers.</div>
+        </div>
+      </a>
+
+      <a href="chapters/03-the-spell.html" class="toc-item">
+        <span class="toc-item-number">03</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Spell</div>
+          <div class="toc-item-desc">Language is the most powerful technology ever deployed. Etymology is archaeology. Naming is power. The map is not the territory, and the word is not the thing &mdash; but try living without either.</div>
+        </div>
+      </a>
+
+      <a href="chapters/04-the-library.html" class="toc-item">
+        <span class="toc-item-number">04</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Library</div>
+          <div class="toc-item-desc">Five thousand years of humanity's best letters to itself. The Vedas, the Dhammapada, Rumi, Ecclesiastes, the Jefferson Bible, and why Thich Nhat Hanh might be the clearest voice in the room.</div>
+        </div>
+      </a>
+
+      <div class="part-divider">
+        <h3>Part II &mdash; The Heart</h3>
+      </div>
+
+      <a href="chapters/05-the-mirror.html" class="toc-item">
+        <span class="toc-item-number">05</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Mirror</div>
+          <div class="toc-item-desc">The Golden Rule appears in every civilization that lasted longer than a generation. Game theory proved it's the optimal strategy. Karma is not metaphysics. It's network science.</div>
+        </div>
+      </a>
+
+      <a href="chapters/06-the-ocean.html" class="toc-item">
+        <span class="toc-item-number">06</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Ocean</div>
+          <div class="toc-item-desc">Nonduality. The wave that realizes it was always the ocean. Einstein's optical delusion of consciousness. Vipassana, Aikido, and the end of the war between self and world.</div>
+        </div>
+      </a>
+
+      <a href="chapters/07-the-frequency.html" class="toc-item">
+        <span class="toc-item-number">07</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Frequency</div>
+          <div class="toc-item-desc">Love. Seven kinds the Greeks named and we collapsed into one word. The neuroscience of connection, the Harvard 80-year study, and why Teilhard de Chardin called it a cosmic force.</div>
+        </div>
+      </a>
+
+      <div class="part-divider">
+        <h3>Part III &mdash; The Forge</h3>
+      </div>
+
+      <a href="chapters/08-the-backbone.html" class="toc-item">
+        <span class="toc-item-number">08</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Backbone</div>
+          <div class="toc-item-desc">Confidence. Not the performer's kind &mdash; the surgical kind. Backed by competence, tempered by humility, and earned through the unsexy homework that nobody applauds.</div>
+        </div>
+      </a>
+
+      <a href="chapters/09-the-razor.html" class="toc-item">
+        <span class="toc-item-number">09</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Razor</div>
+          <div class="toc-item-desc">Critical thinking. The hierarchy of evidence, cognitive bias, the steel man, and the paradox of uncertainty. How to not be fooled &mdash; starting with not fooling yourself.</div>
+        </div>
+      </a>
+
+      <a href="chapters/10-the-formula.html" class="toc-item">
+        <span class="toc-item-number">10</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Formula</div>
+          <div class="toc-item-desc">A seven-phase protocol for learning literally anything. Bird's-eye view to hands-on mastery. Works for quantum physics. Works for bread baking. Works for grief.</div>
+        </div>
+      </a>
+
+      <a href="chapters/11-the-architecture.html" class="toc-item">
+        <span class="toc-item-number">11</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Architecture</div>
+          <div class="toc-item-desc">Twelve principles stolen from elegant code and applied to the architecture of a life. Conciseness, debugging, version control, open source &mdash; your existence is a codebase. Write it clean.</div>
+        </div>
+      </a>
+
+      <a href="chapters/12-the-spark.html" class="toc-item">
+        <span class="toc-item-number">12</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Spark</div>
+          <div class="toc-item-desc">Creativity. The four stages of insight, constraints as liberation, flow states, and why making something &mdash; anything &mdash; every single day is the most god-like act available to a mammal.</div>
+        </div>
+      </a>
+
+      <div class="part-divider">
+        <h3>Part IV &mdash; The Temple</h3>
+      </div>
+
+      <a href="chapters/13-the-freeze.html" class="toc-item">
+        <span class="toc-item-number">13</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Freeze</div>
+          <div class="toc-item-desc">Perfect stillness. The fox and the rabbit both holding their breath. Einstein's relativity inverted: go perfectly still and travel at lightspeed. Vipassana as the science of the self.</div>
+        </div>
+      </a>
+
+      <a href="chapters/14-the-skull.html" class="toc-item">
+        <span class="toc-item-number">14</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Skull</div>
+          <div class="toc-item-desc">Memento mori. You are going to die and that is the best news you will receive today. The Stoics, the Tibetans, and the samurai all agree: face it and be free.</div>
+        </div>
+      </a>
+
+      <a href="chapters/15-the-hollow.html" class="toc-item">
+        <span class="toc-item-number">15</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Hollow</div>
+          <div class="toc-item-desc">Relax. Be hollow like bamboo so the music can pass through you. The Mahamudra of ease, the neuroscience of sleep, and the warrior's secret: even in battle, be calm.</div>
+        </div>
+      </a>
+
+      <a href="chapters/16-the-bridge.html" class="toc-item">
+        <span class="toc-item-number">16</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Bridge</div>
+          <div class="toc-item-desc">Breath. The one function that is both voluntary and involuntary. Pranayama, box breathing, the Wim Hof method, and the vagus nerve &mdash; the back door to your own operating system.</div>
+        </div>
+      </a>
+
+      <a href="chapters/17-the-drift.html" class="toc-item">
+        <span class="toc-item-number">17</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Drift</div>
+          <div class="toc-item-desc">Follow the feather. Intuition as unconscious computation, synchronicity as pattern recognition, and the lost art of letting the wind decide where you go next.</div>
+        </div>
+      </a>
+
+      <div class="part-divider">
+        <h3>Part V &mdash; The Garden</h3>
+      </div>
+
+      <a href="chapters/18-the-vessel.html" class="toc-item">
+        <span class="toc-item-number">18</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Vessel</div>
+          <div class="toc-item-desc">Your body is the only hardware you get. Ultra-processed food is malware. The data is in &mdash; from BMJ to JAMA to NIH. Here is the clear path to a whole-foods, anti-inflammatory life.</div>
+        </div>
+      </a>
+
+      <a href="chapters/19-the-circle.html" class="toc-item">
+        <span class="toc-item-number">19</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Circle</div>
+          <div class="toc-item-desc">Permaculture. Fukuoka's do-nothing farming, the Wood Wide Web, mycorrhizal intelligence, and the radical idea that nature already solved every problem we keep making worse.</div>
+        </div>
+      </a>
+
+      <a href="chapters/20-the-seed.html" class="toc-item">
+        <span class="toc-item-number">20</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Seed</div>
+          <div class="toc-item-desc">Hemp. Food, fiber, fuel, medicine, paper, plastic, building material. One plant. Ten thousand years of use. Eighty years of prohibition. The seed of sovereignty.</div>
+        </div>
+      </a>
+
+      <div class="part-divider">
+        <h3>Part VI &mdash; The Republic</h3>
+      </div>
+
+      <a href="chapters/21-the-grid.html" class="toc-item">
+        <span class="toc-item-number">21</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Grid</div>
+          <div class="toc-item-desc">Individual sovereignty. Every centralized system is a single point of failure. Decentralize your energy, food, information, and income. Antifragile by design.</div>
+        </div>
+      </a>
+
+      <a href="chapters/22-the-handshake.html" class="toc-item">
+        <span class="toc-item-number">22</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Handshake</div>
+          <div class="toc-item-desc">The coalition. Do business only with the decent. Five questions that screen for poison, exploitation, and corruption. When enough people walk away, the machine starves.</div>
+        </div>
+      </a>
+
+      <a href="chapters/23-the-grace.html" class="toc-item">
+        <span class="toc-item-number">23</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Grace</div>
+          <div class="toc-item-desc">Etiquette. From Ptahhotep's 4,400-year-old instructions to the Japanese tea ceremony to holding a door in a strip mall. The radical act of making other people feel seen.</div>
+        </div>
+      </a>
+
+      <a href="chapters/25-the-word.html" class="toc-item">
+        <span class="toc-item-number">24</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Word</div>
+          <div class="toc-item-desc">Keep your word. Don't be a yes-man. Reject toxic positivity. Respect people enough to be honest with them. The compound interest of integrity.</div>
+        </div>
+      </a>
+
+      <a href="chapters/24-the-blank-page.html" class="toc-item">
+        <span class="toc-item-number">25</span>
+        <div class="toc-item-content">
+          <div class="toc-item-title">The Blank Page</div>
+          <div class="toc-item-desc">The codex ends here. The rest is you. Everything before this was raw material. What you build with it is not prescribed. Go make something real.</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <div class="landing-quote">
+    <p>"We are all just walking each other home."</p>
+    <cite>&mdash; Ram Dass</cite>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-logo">Arctus</div>
+    <p class="footer-text">The Octurian Code &mdash; Analects of the Code of Arctus</p>
+    <p class="footer-text" style="margin-top: 0.5rem; opacity: 0.5;">Written by no one in particular. For the descendants.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
